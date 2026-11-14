@@ -14,13 +14,9 @@ app.use(express.json());
 // Connect to MongoDB
 connectDB();
 
-// Home page
+// Home page - Redirect to the live Todo App
 app.get("/", (req, res) => {
-    res.send(`
-        <h1>Todo App</h1>
-        <p>Welcome to the Todo application!</p>
-        <p>Backend server is running successfully.</p>
-    `);
+    res.redirect("https://dayframe-mern-todo.vercel.app");
 });
 
 // Developer name
